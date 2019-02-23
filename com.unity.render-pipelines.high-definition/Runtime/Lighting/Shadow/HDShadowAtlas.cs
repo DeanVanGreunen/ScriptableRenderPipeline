@@ -255,10 +255,7 @@ namespace UnityEngine.Experimental.Rendering.HDPipeline
 
             foreach (var shadowRequest in m_ShadowRequests)
             {
-                float safeguard = 2;
-                Rect bordedViewport = new Rect(Mathf.Max(shadowRequest.atlasViewport.x - safeguard, 0.0f), Mathf.Max(shadowRequest.atlasViewport.y - safeguard, 0.0f), shadowRequest.atlasViewport.width + safeguard, shadowRequest.atlasViewport.height + safeguard);
-
-                cmd.SetViewport(bordedViewport);
+                cmd.SetViewport(shadowRequest.atlasViewport);
 
                 cmd.SetViewProjectionMatrices(shadowRequest.view, shadowRequest.projection);
 
