@@ -25,7 +25,6 @@ namespace UnityEditor.Experimental.Rendering.HDPipeline
                 "#pragma multi_compile _ SHADOWS_SHADOWMASK",
                 "#pragma multi_compile DECALS_OFF DECALS_3RT DECALS_4RT",
                 "#pragma multi_compile _ LIGHT_LAYERS",
-                "#pragma multi_compile _ _DEPTHOFFSET_ON",
             },
             Includes = new List<string>()
             {
@@ -164,7 +163,6 @@ namespace UnityEditor.Experimental.Rendering.HDPipeline
             ExtraDefines = new List<string>()
             {
                 "#define USE_LEGACY_UNITY_MATRIX_VARIABLES",
-                "#pragma multi_compile _ _DEPTHOFFSET_ON",
             },
             Includes = new List<string>()
             {
@@ -384,7 +382,6 @@ namespace UnityEditor.Experimental.Rendering.HDPipeline
             ExtraDefines = new List<string>()
             {
                 "#define CUTOFF_TRANSPARENT_DEPTH_PREPASS",
-                "#pragma multi_compile _ _DEPTHOFFSET_ON",
             },
             Includes = new List<string>()
             {
@@ -557,7 +554,6 @@ namespace UnityEditor.Experimental.Rendering.HDPipeline
             ExtraDefines = new List<string>()
             {
                 "#define CUTOFF_TRANSPARENT_DEPTH_POSTPASS",
-                "#pragma multi_compile _ _DEPTHOFFSET_ON",
             },
             Includes = new List<string>()
             {
