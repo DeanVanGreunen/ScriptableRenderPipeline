@@ -335,6 +335,8 @@ namespace UnityEngine.Experimental.Rendering.HDPipeline
             return m_WillRenderShadows;
         }
 
+        // This offset shift the position of the spotlight used to approximate the area light shadows. The offset is the minimum such that the full
+        // area light shape is included in the cone spanned by the spot light. 
         public static float GetAreaLightOffsetForShadows(Vector2 shapeSize, float coneAngle)
         {
             float rectangleDiagonal = shapeSize.magnitude;
