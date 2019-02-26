@@ -37,6 +37,8 @@ float ShadowMoments_WarpDepth_PosOnly(float depth, float exponent)
     return pos;
 }
 
+// This uses exp2 instead of exp (as it has a native hw instruction), as such, the exponent
+// expects a log2(e) factor baked in. 
 float ShadowMoments_WarpDepth_PosOnlyBaseTwo(float depth, float exponent)
 {
     // Rescale depth into [-1;1]
