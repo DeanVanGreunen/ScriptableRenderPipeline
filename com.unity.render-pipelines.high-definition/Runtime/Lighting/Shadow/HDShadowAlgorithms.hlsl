@@ -292,7 +292,7 @@ float EvalShadow_AreaDepth(HDShadowData sd, Texture2D tex, float2 positionSS, fl
     float2 maxCoord = (sd.shadowMapSize.xy - 0.5f * blurPassesScale) * _AreaShadowAtlasSize.zw + sd.atlasOffset;
     float2 minCoord = sd.atlasOffset + _AreaShadowAtlasSize.zw * blurPassesScale;
 
-    if (any(posTC > maxCoord || posTC < minCoord))
+    if (any(posTC.xy > maxCoord || posTC.xy < minCoord))
     {
         return 1.0f;
     }
